@@ -1,0 +1,104 @@
+
+[
+  {
+    "nro": 1,
+    "juego": "Ocarina of Time",
+    "descripcion": "Revolucionó la acción 3D con exploración y narrativa épica.",
+    "consola": "Nintendo 64",
+    "fecha_salida": "1998-11-21",
+    "ventas_aprox": "7.6 millones",
+    "valoracion_media": 5.0,
+    "portada": "../assets/img/cards/zelda (1).png"
+  },
+  {
+    "nro": 2,
+    "juego": "Breath of the Wild",
+    "descripcion": "Mundo abierto innovador con libertad total para explorar.",
+    "consola": "Nintendo Switch / Wii U",
+    "fecha_salida": "2017-03-03",
+    "ventas_aprox": "34.5 millones",
+    "valoracion_media": 4.9,
+    "portada": "../assets/img/cards/zelda (2).png"
+  },
+  {
+    "nro": 3,
+    "juego": "The Wind Waker",
+    "descripcion": "Estilo animado y navegación entre islas con gran encanto.",
+    "consola": "Nintendo GameCube",
+    "fecha_salida": "2002-12-13",
+    "ventas_aprox": "4.6 millones",
+    "valoracion_media": 4.5,
+    "portada": "../assets/img/cards/zelda (3).png"
+  },
+  {
+    "nro": 4,
+    "juego": "Tears of the Kingdom",
+    "descripcion": "Expande el mundo abierto con construcción y físicas creativas.",
+    "consola": "Nintendo Switch",
+    "fecha_salida": "2023-05-12",
+    "ventas_aprox": "20 millones",
+    "valoracion_media": 4.8,
+    "portada": "../assets/img/cards/zelda (4).png"
+  },
+  {
+    "nro": 5,
+    "juego": "A Link to the Past",
+    "descripcion": "Clásico en vista cenital con dos mundos y diseño ejemplar.",
+    "consola": "Super Nintendo (SNES)",
+    "fecha_salida": "1991-11-21",
+    "ventas_aprox": "4.6 millones",
+    "valoracion_media": 4.7,
+    "portada": "../assets/img/cards/zelda (5).png"
+  },
+  {
+    "nro": 6,
+    "juego": "Majora’s Mask",
+    "descripcion": "Ciclo temporal único y tono más oscuro e introspectivo.",
+    "consola": "Nintendo 64",
+    "fecha_salida": "2000-04-27",
+    "ventas_aprox": "3.4 millones",
+    "valoracion_media": 4.4,
+    "portada": "../assets/img/cards/zelda (6).png"
+  },
+  {
+    "nro": 7,
+    "juego": "Twilight Princess",
+    "descripcion": "Aventura madura con combates pulidos y atmósfera sombría.",
+    "consola": "Wii / GameCube",
+    "fecha_salida": "2006-11-19",
+    "ventas_aprox": "8.7 millones",
+    "valoracion_media": 4.6,
+    "portada": "../assets/img/cards/zelda (7).png"
+  },
+  {
+    "nro": 8,
+    "juego": "The Minish Cap",
+    "descripcion": "Cambio de tamaño para resolver acertijos con creatividad.",
+    "consola": "Game Boy Advance",
+    "fecha_salida": "2004-11-04",
+    "ventas_aprox": "1.8 millones",
+    "valoracion_media": 4.2,
+    "portada": "../assets/img/cards/zelda (8).png"
+  },
+  {
+    "nro": 9,
+    "juego": "A Link Between Worlds",
+    "descripcion": "Heredero del clásico SNES con libertad de progreso y fusión en muros.",
+    "consola": "Nintendo 3DS",
+    "fecha_salida": "2013-11-22",
+    "ventas_aprox": "4.2 millones",
+    "valoracion_media": 4.3,
+    "portada": "../assets/img/cards/zelda (9).png"
+  },
+  {
+    "nro": 10,
+    "juego": "Links Awakening",
+    "descripcion": "Aventura portátil con una isla misteriosa y tono encantador.",
+    "consola": "Game Boy",
+    "fecha_salida": "1993-06-06",
+    "ventas_aprox": "3.8 millones",
+    "valoracion_media": 4.1,
+    "portada": "../assets/img/cards/zelda (10).png"
+  }
+]
+
