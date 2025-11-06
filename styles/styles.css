@@ -189,10 +189,11 @@ main {
     align-items: center;
 
     h1 {
-        margin-bottom: 2rem;
+        margin: 2rem 1rem;
+        text-align: center;
     }
 
-    h2{
+    h2 {
         margin: 2rem 1rem;
         align-self: flex-start;
     }
@@ -247,7 +248,7 @@ main {
     }
 }
 
-.card-img-top{
+.card-img-top {
     border-radius: var(--border-radius);
     box-shadow: var(--shadow-elevated);
 }
@@ -270,7 +271,6 @@ main {
     }
 }
 
-
 .card-position {
     position: absolute;
     top: 0.5rem;
@@ -291,7 +291,6 @@ main {
         font-weight: bold;
     }
 }
-
 
 .to-top {
     position: fixed;
@@ -320,7 +319,7 @@ footer {
     text-align: center;
     padding: 1rem 0;
     margin-top: 2rem;
-    display: flex;    
+    display: flex;
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -329,17 +328,82 @@ footer {
         font-size: 0.9rem;
     }
 
-    ul{
+    ul {
         padding: 0;
         margin: 10px 0;
     }
 
-    li{
+    li {
         list-style: none;
         margin: 0.2rem 0;
         text-align: start;
-        a{
+        a {
             color: var(--color-background);
+        }
+    }
+}
+
+.contact {
+    min-width: 550px;
+    margin: 0 auto;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+
+    .form-check {
+        padding: 0;
+
+        label {
+            color: #5a5a5a79;
+            font-size: 0.9rem;
+        }
+    }
+
+    .button {
+        width: 100px;
+        align-self: flex-end;
+
+        &:hover {
+            background-color: var(--color-primary);
+        }
+
+        &:active {
+            transform: scale(0.96);
+            color: var(--color-secondary);
+        }
+    }
+}
+
+/* Estilos para el modal */
+
+.modal-content {
+    h4 {
+        color: var(--color-primary);
+        margin: 1rem;
+    }
+
+    .modal-body {
+        padding: 1rem;
+        color: var(--color-text);
+    }
+
+    .modal-footer {
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+
+        .btn-secondary {
+            width: 6rem;
+            color: var(--text-inverse);
+            background-color: var(--color-accent);
+
+            &:active {
+                transform: scale(0.96);
+                background-color: var(--color-background);
+                color: var(--color-secondary);
+            }
         }
     }
 }

@@ -1,1 +1,87 @@
-<p>Hola</p>
+<div class="contact">
+    <h1>Contacto</h1>
+    <form>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label"
+                >Su Direccion de Email</label
+            >
+            <input
+                type="email"
+                class="form-control"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+            />
+            <div id="emailHelp" class="form-text">
+                Nunca compartiremos tu email con nadie.
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="asunto" class="form-label">Asunto</label>
+            <input type="text" class="form-control" id="asunto" />
+        </div>
+        <div class="mb-3">
+            <label for="textarea" class="form-label">Comentario</label>
+            <textarea
+                class="form-control"
+                id="textarea"
+                rows="5"
+                placeholder="Deje aqui su comentario..."
+            ></textarea>
+        </div>
+        <div class="mb-3 form-check">
+            <input
+                type="checkbox"
+                class="check-subsctription"
+                id="subsctription"
+                name="subsctription"
+                checked
+            />
+            <label class="form-check-label" for="subsctription"
+                >Quiero recibir noticias</label
+            >
+        </div>
+        <button
+            type="button"
+            class="button"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+        >
+            Enviar
+        </button>
+    </form>
+
+    <!-- Modal -->
+    <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+    >
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4>
+                        Email enviado correctamente ✔️
+                    </h4>
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                    ></button>
+                </div>
+                <div class="modal-body">Gracias por tus comentarios, Estamos trabajando para mejorar nuestros servicios. Tu formulario se ha enviado correctamente.</div>
+                <div class="modal-footer">
+                    <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal"
+                    >
+                        Cerrar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

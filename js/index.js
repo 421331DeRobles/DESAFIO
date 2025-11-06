@@ -44,7 +44,7 @@ function generarCardsDesdeJSON(rutaJSON) {
         .catch((error) => console.error("Error al cargar el JSON:", error));
 }
 
-// Llamás a la función cuando el DOM esté listo
+// llama funcion cuando el DOM esta listo
 document.addEventListener("DOMContentLoaded", () => {
     generarCardsDesdeJSON("../juegos.json");
 });
@@ -57,3 +57,100 @@ function scrollToTop() {
         behavior: "smooth"
     });
 }
+
+
+// Mavegacion entre Home y Contacto
+document.addEventListener("DOMContentLoaded", () => {
+    const homeDiv = document.querySelector(".home-main");
+    if (!homeDiv) return;
+    const container = homeDiv.parentElement; // el contenedor donde está .home-main
+    let originalHTML = container.innerHTML;
+
+    async function loadContacto() {
+        try {
+            const res = await fetch("contacto.html");
+            const text = await res.text();
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(text, "text/html");
+            const contact = doc.querySelector(".contact");
+            if (!contact) {
+                console.error("No se encontró .contact en contacto.html");
+                return;
+            }
+            container.innerHTML = "";
+            container.appendChild(document.importNode(contact, true));
+            scrollToTop();
+        } catch (err) {
+            console.error("Error cargando contacto.html:", err);
+        }
+    }
+
+    function restoreHome() {
+        container.innerHTML = originalHTML;
+        // Si el contenedor de cards está en el HTML restaurado, volver a generarlas
+        const cardsContainer = container.querySelector("#cards-container");
+        if (cardsContainer) {
+            generarCardsDesdeJSON("../juegos.json");
+        }
+        scrollToTop();
+    }
+
+    document.querySelectorAll("nav a").forEach((a) => {
+        a.addEventListener("click", (e) => {
+            const txt = (a.textContent || "").trim().toLowerCase();
+            if (txt === "contacto") {
+                e.preventDefault();
+                loadContacto();
+            } else if (txt === "home") {
+                e.preventDefault();
+                restoreHome();
+            }
+        });
+    });
+});
+
+// Navegacion activa en nav
+document.addEventListener("DOMContentLoaded", () => {
+    const navAnchors = document.querySelectorAll('li.nav-item > a');
+
+    function clearAct() {
+        navAnchors.forEach((a) => a.classList.remove("act"));
+    }
+
+    navAnchors.forEach((a) => {
+        a.addEventListener("click", (e) => {
+            if (a.classList.contains("act")) {
+                a.classList.remove("act");
+            } else {
+                clearAct();
+                a.classList.add("act");
+            }
+        });
+    });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    function attachReloadButtons(root = document) {
+        root.querySelectorAll(".btn-secondary, .btn-close").forEach((btn) => {
+            btn.addEventListener("click", () => {
+                // permitir que cualquier cierre de modal ocurra y luego recargar
+                setTimeout(() => location.reload(), 0);
+            });
+        });
+    }
+
+    attachReloadButtons();
+
+    // Re-atachar si se insertan elementos dinámicamente (ej. carga de contacto.html)
+    const observer = new MutationObserver((mutations) => {
+        for (const m of mutations) {
+            if (m.addedNodes.length) {
+                m.addedNodes.forEach((node) => {
+                    if (node.nodeType === 1) attachReloadButtons(node);
+                });
+            }
+        }
+    });
+
+    observer.observe(document.body, { childList: true, subtree: true });
+});
